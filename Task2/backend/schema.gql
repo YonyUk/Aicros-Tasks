@@ -1,0 +1,135 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Test {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Area {
+  """Area id"""
+  AreaID: String!
+
+  """Area name"""
+  AreaName: String!
+}
+
+type Active {
+  """Active id"""
+  ActiveID: String!
+
+  """Active type"""
+  ActiveType: String!
+
+  """Active propierties"""
+  ActivePropierties: String!
+
+  """Active location"""
+  ActiveLocation: String!
+
+  """Active's area"""
+  Area: String!
+}
+
+type CreateActiveResponse {
+  """Status of the result of the operation"""
+  Status: String!
+
+  """Message of the response"""
+  Message: String!
+}
+
+type CreateAreaResponse {
+  """Status of the result of the operation"""
+  Status: String!
+
+  """Message of the operation"""
+  Message: String!
+}
+
+type Query {
+  test(id: Int!): Test!
+  actives: [Active!]!
+  active(id: String!): Active!
+  activeByArea(areaid: String!): [Active!]!
+
+  """gets a subgroup of active given a coutn parameter"""
+  activeSubGroup(page: Int!): [Active!]!
+  areas: [Area!]!
+  area(id: String!): Area!
+  areaSubGroup(page: Int!): [Area!]!
+}
+
+type Mutation {
+  createTest(createTestInput: CreateTestInput!): Test!
+  updateTest(updateTestInput: UpdateTestInput!): Test!
+  removeTest(id: Int!): Test!
+  createActive(createActiveInput: CreateActiveInput!): CreateActiveResponse!
+  updateActive(updateActiveInput: UpdateActiveInput!): CreateActiveResponse!
+  removeActive(id: String!): CreateActiveResponse!
+  createArea(createAreaInput: CreateAreaInput!): CreateAreaResponse!
+  updateArea(updateAreaInput: UpdateAreaInput!): CreateAreaResponse!
+  removeArea(id: String!): CreateAreaResponse!
+}
+
+input CreateTestInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateTestInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateActiveInput {
+  """Active id"""
+  ActiveID: String!
+
+  """Active type"""
+  ActiveType: String!
+
+  """Active propierties"""
+  ActivePropierties: String!
+
+  """Active location"""
+  ActiveLocation: String!
+
+  """Area's active"""
+  Area: String!
+}
+
+input UpdateActiveInput {
+  """Active id"""
+  ActiveID: String!
+
+  """Active type"""
+  ActiveType: String!
+
+  """Active propierties"""
+  ActivePropierties: String!
+
+  """Active location"""
+  ActiveLocation: String!
+
+  """Area's active"""
+  Area: String!
+}
+
+input CreateAreaInput {
+  """Area id"""
+  AreaID: String!
+
+  """Area name"""
+  AreaName: String!
+}
+
+input UpdateAreaInput {
+  """Area id"""
+  AreaID: String!
+
+  """Area name"""
+  AreaName: String!
+}

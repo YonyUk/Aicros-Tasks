@@ -1,0 +1,11 @@
+<div class="head-page container">
+    <h1> {{ Title }} </h1>
+  </div>
+  <div class="items">
+    <app-activepresentation (click)="showActives()"></app-activepresentation>
+    <app-areapresentation (click)="showAreas()"></app-areapresentation>
+  </div>
+  <div class="data-storer">
+    <app-activestorerpresentation></app-activestorerpresentation>
+    <app-areastorerpresentation></app-areastorerpresentation>
+  </div>

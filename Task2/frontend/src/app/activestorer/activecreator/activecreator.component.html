@@ -1,0 +1,17 @@
+<h3>ID:</h3>
+<input type="text" name="ActiveID" [(ngModel)]="ID" id="active-id" placeholder="Id's active">
+<br>
+<h3>Type:</h3>
+<input type="text" name="ActiveType" [(ngModel)]="Type" id="active-type" placeholder="Type's active">
+<br>
+<h3>Location:</h3>
+<input type="text" name="ActiveLocation" [(ngModel)]="Location" id="active-location" placeholder="Location's active">
+<br>
+<h3>Area's id owner:</h3>
+<input type="text" name="ActiveArea" [(ngModel)]="AreaID" id="active-area" placeholder="Id's area owner's active">
+<br>
+<br>
+<button type="submit" (click)="saveActive()"> Store Active </button>
+<div *ngIf="Error" class="error-box">
+    <h3> {{ MessageError }} </h3>
+</div>

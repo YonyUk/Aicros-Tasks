@@ -1,0 +1,19 @@
+<div class="title">
+  <h1> {{ title }} </h1>
+</div>
+<div class="model-creator">
+  <button type="submit" (click)="createTaskModel()">➕ Add Model</button>
+</div>
+<app-taskitem *ngFor="let taskItemModel of taskList"
+[TaskID]="taskItemModel.TaskID"
+[TaskName]="taskItemModel.TaskName"
+[TaskDescription]="taskItemModel.TaskDescription"
+[TaskChecked]="taskItemModel.TaskChecked"
+[TaskCreated]="taskItemModel.TaskCreated"
+[TaskSaved]="taskItemModel.TaskSaved"
+(TaskEventListenerCreator)="storeTask($event)"
+(TaskEventListenerDeleter)="deleteTask($event)"
+(TaskEventListenerCanceler)="cancelTask($event)"
+(TaskEventListenerUpdater)="updateTask($event)"
+>
+</app-taskitem>

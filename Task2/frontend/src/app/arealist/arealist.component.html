@@ -1,0 +1,8 @@
+<div class="head-list">
+    <h1> Areas </h1>
+</div>
+<div class="area-list">
+    <app-areaitem *ngFor="let area of areaList"
+    [ID]="area.AreaID"
+    [Name]="area.AreaName"></app-areaitem>
+</div>

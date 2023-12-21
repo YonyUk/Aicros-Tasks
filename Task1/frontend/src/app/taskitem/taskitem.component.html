@@ -1,0 +1,30 @@
+<div class="task-item">
+    <ng-container *ngIf="TaskCreated; else noTaskCreated">
+        <div class="task-name">
+            <h1> {{ TaskName }} </h1>
+        </div>
+        <div class="task-description">
+            <h3> {{ TaskDescription }} </h3>
+        </div>
+        <button type="submit" (click)="markTaskChecked()"> Done </button>
+        <ng-container *ngIf="!TaskSaved">
+            <button type="submit" (click)="saveTask()"> Save </button>
+        </ng-container>
+        <button *ngIf="TaskSaved" type="submit" (click)="editTask()"> Edit </button>
+
+    </ng-container>
+    <ng-template #noTaskCreated>
+        <div class="input-data">
+            <input type="text" name="TaskName" [(ngModel)]="TaskName" id=" {{ TaskID }}-TaskName ">
+        </div>
+        <div class="input-data">
+            <input type="text" name="TaskDescription" [(ngModel)]="TaskDescription" id=" {{ TaskID }}-TaskDescription">
+        </div>
+        <div class="task-controls">
+            <button type="submit" (click)="createTask()"> Pin Task </button>
+            <button type="submit" (click)="cancelTask()"> Cancel </button>
+        </div>
+    </ng-template>
+
+
+</div>

@@ -1,0 +1,9 @@
+<h1>ID</h1>
+<input type="text" name="AreaID" id="AreaID" [(ngModel)]="ID" placeholder="Area's id">
+<br>
+<h1>Name</h1>
+<input type="text" name="AreaName" id="AreaName" [(ngModel)]="Name" placeholder="Area's name">
+<button type="submit" (click)="storeArea()">Regist Area</button>
+<div class="error-box" *ngIf="Error">
+    <h3> {{ MessageError }} </h3>
+</div>

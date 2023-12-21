@@ -1,0 +1,16 @@
+<div class="head-list">
+    <h1> Actives </h1>
+</div>
+<div class="active-list">
+    <app-activeitem *ngFor="let active of activeList"
+    [ID]="active.ActiveID"
+    [Type]="active.ActiveType"
+    [Location]="active.ActiveLocation"
+    [Propierties]="active.ActivePropierties"
+    ></app-activeitem>
+</div>
+<div class="regist-active">
+    <app-activestorerpresentation></app-activestorerpresentation>
+</div>
+<button *ngIf="Page !== 0" type="submit" (click)="previousPage()"> Previous </button>
+<button *ngIf="MoreData" type="submit" (click)="nextPage()"> Next </button>

@@ -1,0 +1,32 @@
+.active{
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(174, 238, 250);
+    border: 2px solid rgb(201, 160, 240);
+    border-radius: 15px;
+}
+
+.active-data{
+    font-size: large;
+}
+
+.active-propierties{
+    padding: 10px;
+    margin-left: 40px;
+}
+
+button{
+    align-self: flex-end;
+    border-radius: 15px;
+    color: rgb(174, 238, 250);
+    background-color: rgba(21, 6, 49, 0.596);
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 20px;
+    margin-left: 80px;
+    font-size: 20px;
+}
